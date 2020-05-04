@@ -1,0 +1,66 @@
+{
+  "name": "@gmetrixr/board-ui",
+  "version": "0.0.3",
+  "main": "lib/index.js",
+  "module": "packages/index.js",
+  "repository": "https://git.gmetri.io/gmetrixr/board-ui",
+  "author": "GMetri <admin@gmetri.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "start-storybook -p 3710 --ci",
+    "build": "rm -rf build; mkdir -p build; build-storybook -o build",
+    "bundle": "yarn publish:version && yarn publish:npm",
+    "publish:version": "N=$(node -p \"require('./package.json').name\") && yarn version --patch --message \"v%s: $N autotagged\" && git push",
+    "publish:npm": "V=$(node -p \"require('./package.json').version\") && yarn publish --new-version $V --access public"
+  },
+  "dependencies": {
+    "http-server": "^0.12.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.0",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-decorators": "7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "7.8.3",
+    "@babel/plugin-proposal-function-sent": "7.8.3",
+    "@babel/plugin-proposal-json-strings": "^7.8.3",
+    "@babel/plugin-proposal-numeric-separator": "^7.8.3",
+    "@babel/plugin-proposal-throw-expressions": "^7.8.3",
+    "@babel/plugin-syntax-import-meta": "^7.8.3",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-backgrounds": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/cli": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@types/lodash": "^4.14.149",
+    "@types/react-dom": "^16.9.7",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "lodash": "^4.17.15",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "storybook-addon-figma": "^0.1.0",
+    "storybook-addon-jsx": "^7.2.3",
+    "storybook-readme": "^5.0.8",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-webpack-plugin": "1.2.3",
+    "typescript": "^3.8.3"
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "files": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  board-ui:
+    image: "gmetrixr/board-ui:base"
+    container_name: gmetrixr_board-ui
+    ports:
+      - "3710:3710"
+    volumes:
+      - .:/src
+    command: ["sleep", "inf"]
+    privileged: true
+
+networks:
+  default:
+    external:
+      name: gmetrixr
