@@ -45,7 +45,8 @@ function BoardController() {
 
   function updatePin(p: PinProps){
     board.pins[p.id] = p;
-    setBoard(board);
+    const new_board = { ...board };
+    setBoard(new_board);
   }
 
   function addPin(){
