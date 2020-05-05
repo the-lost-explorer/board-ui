@@ -1,11 +1,5 @@
-/**
- * @format
- */
 
-import Board from './Board';
-import Pin from './Pin';
+import * as BoardNm from './Board';
+import * as PinNm from './Pin';
 
-export {
-    Board,
-    Pin
-};
+export { BoardNm, PinNm };
