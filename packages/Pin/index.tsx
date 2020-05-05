@@ -21,7 +21,7 @@ export default function Pin({ pinProps, onChange }: Props) {
 
   return (
     <div className='board_ui__pin'>
-      <textarea className={`board_ui__pin_${pinProps.color ? pinProps.color : 'yellow'}`} onChange={(e: any) => pinContentModified(e.target.value)} defaultValue={pinProps.body}></textarea>
+      <textarea className={`board_ui__pin_${pinProps.color ? pinProps.color : 'yellow'}`} onChange={(e: any) => pinContentModified(e.target.value)} value={pinProps.body}></textarea>
     </div>
   );
 }
