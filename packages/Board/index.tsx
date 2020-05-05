@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Pin, { PinProps } from '../Pin';
 
 export interface BoardProps {
@@ -15,7 +15,9 @@ interface Props {
 
 export default function Board({ updatePin, boardJson }: Props) {
 
-  console.log(boardJson);
+  useEffect(() => {
+    console.log('changes made');
+  }, [boardJson]);
 
   return (
     <div className="board_ui__board flex flex-wrap">
