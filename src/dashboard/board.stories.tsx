@@ -7,7 +7,7 @@ import '../../packages/Pin/index.scss';
 import '../../packages/styles/_flex_helpers.scss';
 
 
-export default function BoardController() {
+function BoardController() {
   const [board, setBoard] = useState<BoardProps>({
     id: 'tech',
     pins: {
@@ -51,13 +51,11 @@ export default function BoardController() {
   function addPin(){
     const nextIndex = (Object.values(board.pins).length + 1).toString(); 
     board.pins[nextIndex] = { id: nextIndex, body: '', pitch: '123', yaw: '123' };
-    console.log(board);
-    setBoard(board);
+    const new_board = { ...board };
+    setBoard(new_board);
   }
 
-
   return  <Board updatePin={updatePin} boardJson={board} />
-
 }
 
 storiesOf('Board', module).add('Sticky Notes', () => <BoardController />);
