@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export interface PinProps {
-  id: string,
-  body: string,
-  color?: string,
-  pitch?: string,
-  yaw?: string
+  id: string;
+  body: string;
+  color?: 'yellow' | 'red' | 'blue' | 'green' | 'white' | undefined;
+  pitch?: string;
+  yaw?: string;
 }
 
-export default function Pin({ }: PinProps) {
+interface Props {
+  onChange: (p : PinProps) => void,
+  pinProps: PinProps
+}
+
+export default function Pin({ pinProps, onChange }: Props) {
+  function pinContentModified(body: string) {
+    onChange({...pinProps, body});
+  }
+
   return (
-    <div>
-      Some Pin
+    <div className='board_ui__pin'>
+      <textarea className={`board_ui__pin_${pinProps.color ? pinProps.color : 'yellow'}`} onChange={(e: any) => pinContentModified(e.target.value)} defaultValue={pinProps.body}></textarea>
     </div>
-  )
-}  
+  );
+}

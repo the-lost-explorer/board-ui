@@ -1,0 +1,45 @@
+.board_ui {
+
+  &__pin {
+    display: inline-block;
+
+    & textarea {
+      padding: 10px;
+      border: none;
+      width: 200px;
+      height: 200px;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      margin: 0 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & .board_ui__pin_yellow {
+      background-color: yellow;
+      color: black;
+    }
+
+    & .board_ui__pin_red {
+      background-color: red;
+      color: white;
+    }
+
+    & .board_ui__pin_blue {
+      background-color: blue;
+      color: black;
+    }
+
+    & .board_ui__pin_green {
+      background-color: green;
+      color: white;
+    }
+
+    & .board_ui__pin_white {
+      background-color: white;
+      color: black;
+    }
+  }
+}
