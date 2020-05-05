@@ -1,11 +1,11 @@
 import React from 'react';
 
 export interface PinProps {
-  id: string;
+  id: number | string;
   body: string;
-  color?: 'yellow' | 'red' | 'blue' | 'green' | 'white' | undefined;
-  pitch?: string;
-  yaw?: string;
+  color?: string;
+  pitch?: number;
+  yaw?: number;
 }
 
 interface Props {
