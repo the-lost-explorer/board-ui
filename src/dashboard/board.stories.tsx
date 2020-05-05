@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
-import Board, { BoardProps } from '../../packages/Board';
+import { Board, BoardProps } from '../../packages/Board';
 import '../../packages/Board/index.scss';
 import { PinProps } from '../../packages/Pin';
 import '../../packages/Pin/index.scss';
@@ -50,14 +50,14 @@ function BoardController() {
   }
 
   function addPin(){
-    const nextIndex = (Object.values(board.pins).length + 1).toString(); 
+    const nextIndex = (Object.values(board.pins).length + 1).toString();
     board.pins[nextIndex] = { id: nextIndex, body: '', pitch: '123', yaw: '123' };
     const new_board = { ...board };
     setBoard(new_board);
   }
 
   return  <React.Fragment>
-    <button onClick={addPin}>New Pin</button> 
+    <button onClick={addPin}>New Pin</button>
     <br />
     <br />
     <Board updatePin={updatePin} boardJson={board} />

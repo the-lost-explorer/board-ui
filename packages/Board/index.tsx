@@ -1,5 +1,5 @@
 import React from 'react';
-import Pin, { PinProps } from '../Pin';
+import { Pin, PinProps } from '../Pin';
 
 export interface BoardProps {
   id: string,
@@ -13,7 +13,7 @@ interface Props {
   updatePin: (p : PinProps) => void,
 }
 
-export default function Board({ updatePin, boardJson }: Props) {
+export function Board({ updatePin, boardJson }: Props) {
 return (
     <div className="board_ui__board flex flex-wrap">
       {Object.values(boardJson.pins).sort((a: PinProps, b: PinProps) => parseInt(a.id) > parseInt(b.id) ? -1 : parseInt(a.id) < parseInt(b.id) ? 1 : 0 ).map((p: PinProps) => (

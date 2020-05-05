@@ -13,7 +13,7 @@ interface Props {
   pinProps: PinProps
 }
 
-export default function Pin({ pinProps, onChange }: Props) {
+export function Pin({ pinProps, onChange }: Props) {
   function pinContentModified(body: string) {
     onChange({...pinProps, body});
   }
