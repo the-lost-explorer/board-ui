@@ -3,6 +3,7 @@
   "version": "0.0.9",
   "main": "lib/index.js",
   "module": "packages/index.tsx",
+  "types": "lib/index.d.ts",
   "repository": "https://git.gmetri.io/gmetrixr/board-ui",
   "author": "GMetri <admin@gmetri.com>",
   "license": "MIT",
