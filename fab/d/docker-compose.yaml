@@ -5,7 +5,7 @@ services:
     image: "gmetrixr/board-ui:base"
     container_name: gmetrixr_board-ui
     ports:
-      - "3710:3710"
+      - "3810:3810"
     volumes:
       - .:/src
     command: ["sleep", "inf"]

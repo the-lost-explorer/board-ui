@@ -14,7 +14,7 @@ All together - Board UI
 2. `yarn` [To install all dependencies]
 3. `yarn watch` [Start watch mode on the project]
 
-Then goto http://localhost:3710 to view the project. 
+Then goto http://localhost:3810 to view the project. 
 
 ## Notes
 
