@@ -55,7 +55,12 @@ function BoardController() {
     setBoard(new_board);
   }
 
-  return  <Board updatePin={updatePin} boardJson={board} />
+  return  <React.Fragment>
+    <button onClick={addPin}>New Pin</button> 
+    <br />
+    <br />
+    <Board updatePin={updatePin} boardJson={board} />
+  </React.Fragment>
 }
 
 storiesOf('Board', module).add('Sticky Notes', () => <BoardController />);
