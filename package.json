@@ -1,6 +1,6 @@
 {
   "name": "@gmetrixr/board-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "lib/index.js",
   "module": "packages/index.tsx",
   "repository": "https://git.gmetri.io/gmetrixr/board-ui",
