@@ -1,10 +1,9 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "flowtype",
     "react"
   ],
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:flowtype/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "root": true,
   "parserOptions": {
     "ecmaVersion": 6,
@@ -31,12 +30,6 @@
     "no-console": 0,
     "no-constant-condition": 0,
     "semi": ["error", "always"],
-    "no-class-assign": 0,
-    "flowtype/space-after-type-colon": [
-      2,
-      "always",
-      {"allowLineBreak": true}
-    ],
-    "flowtype/no-types-missing-file-annotation": 0
+    "no-class-assign": 0
   }
 }
