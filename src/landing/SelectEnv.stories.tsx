@@ -4,7 +4,7 @@ import { BgLayout } from '../../packages/components/Block';
 import '../../packages/components/Block/index.scss';
 import '../../packages/components/Button/index.scss';
 import '../../packages/components/Input/index.scss';
-import JoinBoardRoom from '../../packages/components/Layouts/JoinBoardRoom';
+import SelectEnv from '../../packages/components/Layouts/SelectEnv';
 // import css
 import '../../packages/styles/index.scss';
 
@@ -16,9 +16,9 @@ function Dashboard() {
 
   return (
     <BgLayout>
-      <JoinBoardRoom onSubmit={getUserName} boardName={'display'} />
+      <SelectEnv onSelect={getUserName} />
     </BgLayout>
   );
 }
 
-storiesOf('BoardRoom', module).add('Join', () => <Dashboard />);
+storiesOf('BoardRoom', module).add('Select Environment', () => <Dashboard />);

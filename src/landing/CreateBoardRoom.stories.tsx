@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
-import { FullLayout } from '../../packages/components/Block';
+import { BgLayout } from '../../packages/components/Block';
 import '../../packages/components/Block/index.scss';
 import '../../packages/components/Button/index.scss';
 import '../../packages/components/Input/index.scss';
@@ -23,13 +23,13 @@ function Dashboard() {
   function onClickBoardUrl() {}
 
   return (
-    <FullLayout>
+    <BgLayout>
       {invite ? (
           <InviteBoardRoom name={boardName} onClickNext={onClickBoardUrl} onClickCopy={onClickInvite} />
         ) : (
           <CreateBoardRoom onSubmit={getBoardRoomName} />
         )}
-    </FullLayout>
+    </BgLayout>
   );
 }
 
