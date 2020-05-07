@@ -12,7 +12,7 @@
     "build": "rm -rf build; mkdir -p build; build-storybook -o build",
     "bundle": "yarn bundle:clean; yarn bundle:build; yarn bundle:buildtypes; yarn publish:version && yarn publish:npm",
     "bundle:clean": "rm -rf lib;",
-    "bundle:build": "yarn babel src --config-file ./babel-preset-stage2.js --no-babelrc --extensions \\\".ts,.tsx\\\" --out-dir lib/;",
+    "bundle:build": "yarn babel src --config-file ./babel-preset-stage2.js --no-babelrc --extensions \".ts,.tsx\" --out-dir lib/;",
     "bundle:buildtypes": "yarn tsc --project tsconfig.types.json",
     "publish:version": "N=$(node -p \"require('./package.json').name\") && yarn version --patch --message \"v%s: $N autotagged\" && git push",
     "publish:npm": "V=$(node -p \"require('./package.json').version\") && yarn publish --new-version $V --access public"
