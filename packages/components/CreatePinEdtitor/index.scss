@@ -85,4 +85,11 @@
       }
     }
   }
+
+  & .radio_button_container {
+
+    & > div {
+      margin-left: 20px;
+    }
+  }
 }

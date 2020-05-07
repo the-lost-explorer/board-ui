@@ -1,14 +1,38 @@
-import React from 'react';
-import './index.scss';
-import '../../styles/_components.scss';
+import React, {useState} from 'react';
+import Radio from '../Radio'
 
 import CloseIcon from '../../Icons/CloseIcon';
-import CursorIcon from '../../Icons/CursorIcon';
-import ImageIcon from '../../Icons/ImageIcon';
-import AudioIcon from '../../Icons/AudioIcon';
+import Text from '../../Icons/Text';
+import Image from '../../Icons/Image';
+import Audio from '../../Icons/Audio';
 import OtherMedia from '../../Icons/OtherMedia';
 
 export default function CreatePinEditor() {
+  const [selected, setSelected] = useState('2');
+
+
+  const data = [
+    {
+      value: 'text',
+      content: <Text />,
+    },
+    {
+      value: 'audio',
+      content: <Audio />,
+    },
+    {
+      value: 'others',
+      content: <OtherMedia />,
+    },
+    {
+      value: 'image',
+      content: <Image />,
+    },
+  ];
+
+  function onChange(value: string) {
+    setSelected(value);
+  }
 
   return (
     <div className="createPinEditor_ui">
@@ -21,24 +45,13 @@ export default function CreatePinEditor() {
       </div>
 
       <div className="media_pane flex items-center justify-between">
-        <div className="media_pane__icons flex">
-          <div className="media_pane__icons__icon">
-             <CursorIcon />
-          </div>
 
-          <div className="media_pane__icons__icon">
-            <ImageIcon />
-          </div>
-
-          <div className="media_pane__icons__icon">
-            <AudioIcon />
-          </div>
-
-          <div className="media_pane__icons__icon">
-            <OtherMedia />
-          </div>
+        <div className="flex radio_button_container" style={{marginLeft: -20}}>
+          {data.map(s => {
+            return <Radio value={s.value} onChange={onChange} name={'Data'} content={s.content} isSelected={selected} />;
+          })}
         </div>
-
+        
         <CloseIcon />
       </div>
     </div>
