@@ -3,6 +3,9 @@ export default interface Props {
   label?: string,
   info?: string,
   placeholder?: string,
-  onChange: (e: string) => void, 
+  onChange?: (e: string) => void, 
   defaultValue?: string,
+  readOnly?: boolean,
+  buttonIcon?: any,
+  buttonFn?: () => void
 }

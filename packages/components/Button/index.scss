@@ -14,9 +14,17 @@
     border: unset;
     cursor: pointer;
     border-radius: 4px;
-    padding: 16px 32px;
     color: #5790ff;
     transition: all 0.2s ease-in-out;
+
+    &__small {
+      display: flex;
+      padding: 8px 16px;
+    }
+
+    &__medium {
+      padding: 16px 32px;
+    }
 
     &:hover {
       transform: translateY(-1px);
