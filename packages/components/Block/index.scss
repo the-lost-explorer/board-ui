@@ -9,15 +9,16 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
   }
 
   &__block {
     @extend %boxShadow;
 
+    flex: 0 1 453px;
     background-color: $background;
     padding: 60px 90px;
     min-height: 500px;
-    max-width: 633px;
     border-radius: 20px;
   }
 }

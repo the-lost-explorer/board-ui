@@ -3,5 +3,6 @@ export default interface Props {
   children: any,
   className?: string,
   disabled?: boolean,
-  onClick?: () => void
+  onClick?: () => void,
+  small?: boolean
 }
