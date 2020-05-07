@@ -2,6 +2,14 @@
 
   &__pin {
     display: inline-block;
+    position: relative;
+
+    & .closeBtn {
+      position: absolute;
+      top: 2px;
+      right: 7px;
+      cursor: pointer;
+    }
 
     & textarea {
       padding: 10px;

@@ -55,11 +55,20 @@ function BoardController() {
     setBoard(new_board);
   }
 
+  function deletePin(id: string | number){
+    console.log('inside delete pin');
+    delete board.pins[id.toString()];
+    const new_board = { ...board };
+    setBoard(new_board);
+  }
+
   return  <React.Fragment>
     <button onClick={addPin}>New Pin</button>
+    <button onClick={() => deletePin(1)}>Delete Pin</button>
+
     <br />
     <br />
-    <Board updatePin={updatePin} boardJson={board} />
+    <Board updatePin={updatePin} boardJson={board} onDelete={deletePin} />
   </React.Fragment>
 }
 
