@@ -10,18 +10,26 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__block {
-    @extend %boxShadow;
-
-    flex: 0 1 453px;
+    box-shadow: 10px 10px 40px rgba(24, 86, 180, 0.2), -10px -10px 20px #fff;
     background-color: $background;
+    max-width: 633px;
     padding: 60px 90px;
-    min-height: 500px;
+    height: 92%;
+    max-height: 688px;
+    float: right;
     border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+
+    @media only screen and (max-width: 1480px) {
+      max-width: 580px;
+      padding: 50px 75px;
+    }
   }
 }
