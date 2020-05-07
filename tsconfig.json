@@ -25,5 +25,5 @@
     "stories/**/*",
     "src/**/*"
   ],
-  "exclude": ["build"]
+  "exclude": ["lib"]
 }
