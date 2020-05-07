@@ -5,7 +5,7 @@ import '../../styles/_components.scss';
 import CloseIcon from '../../Icons/CloseIcon';
 import CursorIcon from '../../Icons/CursorIcon';
 import ImageIcon from '../../Icons/ImageIcon';
-import MusicIcon from '../../Icons/MusicIcon';
+import AudioIcon from '../../Icons/AudioIcon';
 import OtherMedia from '../../Icons/OtherMedia';
 
 export default function CreatePinEditor() {
@@ -31,7 +31,7 @@ export default function CreatePinEditor() {
           </div>
 
           <div className="media_pane__icons__icon">
-            <MusicIcon />
+            <AudioIcon />
           </div>
 
           <div className="media_pane__icons__icon">

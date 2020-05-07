@@ -7,6 +7,7 @@
   border-radius: 4px;
   position: relative;
   box-sizing: border-box;
+  cursor: url('https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Cursor.svg'), auto;
 
   & .text-title {
     color: #ccc;
@@ -34,6 +35,8 @@
     resize: none;
     padding: 20px;
     height: 175px;
+    width: 100%;
+    cursor: url('https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Cursor.svg'), auto;
 
     &::placeholder {
       color: #ccc;
