@@ -11,31 +11,66 @@ import '../../packages/styles/index.scss';
 import './styles.scss';
 
 
+const data3 = [
+  {
+    value: 'All Clean',
+    label: 'All Clean',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/clean_slate.svg" />
+  },
+  {
+    value: 'Marketing',
+    label: 'Marketing',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/marketing.svg" />
+  },
+  {
+    value: 'Presentation',
+    label: 'Presentation',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/presentation.svg" />
+  },
+  {
+    value: 'Ideation',
+    label: 'Ideation',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/ideation.svg" />
+  },
+  {
+    value: 'Scribbling',
+    label: 'Scribbling',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/scribbling.svg" />
+  },
+];
+
+
 const data2 = [
+  {
+    value: 'Clean Slate',
+    label: 'Clean Slate',
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/clean_slate.svg" />
+  },
   {
     value: 'Bistro',
     label: 'Bistro',
-    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Office.png" />,
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Bistro.svg" />,
   },
   {
     value: 'Office',
     label: 'Office',
-    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Meadows.png" />,
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Office.svg" />,
   },
   {
     value: 'Bedroom',
     label: 'Bedroom',
-    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Lakeside.png" />,
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Bedroom.svg" />,
+    
   },
   {
     value: 'Lakeside',
     label: 'Lakeside',
-    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Bistro.png" />,
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Lakeside.svg" />,
   },
   {
     value: 'Meadows',
     label: 'Meadows',
-    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Bedroom.png" />,
+    content: <img src="https://cdn-minio.vrgmetri.com/cdn-web.vrgmetri.com/board-ui/Meadows.svg" />,
   },
 ];
 
@@ -61,6 +96,7 @@ const data = [
 function ButtonController() {
   const [selected, setSelected] = useState('2');
   const [selected2, setSelected2] = useState('Office');
+  const [selected3, setSelected3] = useState('All Clean');
 
   function onChange(value: string) {
     setSelected(value);
@@ -68,6 +104,10 @@ function ButtonController() {
   
   function onChange2(value: string) {
     setSelected2(value);
+  }
+
+  function onChange3(value: string) {
+    setSelected3(value);
   }
 
   return (
@@ -83,6 +123,14 @@ function ButtonController() {
       <div className="flex flex-wrap envVariables" style={{marginLeft: -40}}>
         {data2.map(s => {
           return <Radio value={s.value} onChange={onChange2} label={s.label} name={'Name'} content={s.content} isSelected={selected2} />;
+        })}
+      </div>
+
+      <br/> <br/> <br/>
+
+      <div className="flex flex-wrap envVariables" style={{marginLeft: -40}}>
+        {data3.map(s => {
+          return <Radio value={s.value} onChange={onChange3} label={s.label} name={'Name'} content={s.content} isSelected={selected3} />;
         })}
       </div>
       
