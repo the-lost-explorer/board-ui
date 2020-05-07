@@ -29,7 +29,7 @@ function Dashboard() {
 
   return (
     <FullLayout>
-      <div className="flex justify-between items-center" style={{ padding: 40 }}>
+      <div className="flex flex-1 justify-between items-center" style={{ padding: 40 }}>
         <div className="flex-1" style={{ textAlign: 'center' }}>
           <Logo />
         </div>
@@ -47,4 +47,4 @@ function Dashboard() {
   );
 }
 
-storiesOf('Dashboard', module).add('Full', () => <Dashboard />);
+storiesOf('BoardRoom', module).add('Create', () => <Dashboard />);

@@ -29,11 +29,10 @@ export default function JoinBoardRoom({ onSubmit, boardName }: Props) {
       <div className="mb-20">
         <LogoIcon />
       </div>
-      <div className="b20b mb-20">
+      <div className="b20b mb-60">
         Create . Collaborate . Create more
       </div>
-
-      <div className="b20l mb-20 ml-40">
+      <div className="b20l mb-40">
         You are entering <span className="b20b primary">{boardName}</span> room.
       </div>
 
