@@ -2,9 +2,12 @@ import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 import { Board, BoardProps } from '../../packages/Board';
 import '../../packages/Board/index.scss';
+//@ts-ignore
+import ButtonReadme from '../../packages/Board/README.md';
 import { PinProps } from '../../packages/Pin';
 import '../../packages/Pin/index.scss';
 import '../../packages/styles/_flex_helpers.scss';
+
 
 function BoardController() {
   const [board, setBoard] = useState<BoardProps>({
@@ -72,4 +75,8 @@ function BoardController() {
   </React.Fragment>
 }
 
-storiesOf('Board', module).add('Sticky Notes', () => <BoardController />);
+storiesOf('Board', module).add('Sticky Notes', () => <BoardController />).addParameters({
+  readme: {
+    content: ButtonReadme,
+  },
+});
